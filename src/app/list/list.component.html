@@ -1,0 +1,13 @@
+<main class="main">
+    <div class="content">
+        <ul class="pokedex__list">
+        @for (item of pokemonList; track item.name; let index = $index) {
+        <li class="pokedex__item" [routerLink]="['/detail-component',item.name]">
+            <span class="pokedex__img"><img [src]="'assets/pokemon/'+(index+1)+'.svg'"></span>
+            <span class="pokedex__item-name">{{ item.name | titlecase }}</span>
+            <span class="pokedex__item-num">{{ getPokeNum(index + 1) }}</span>
+        </li>
+        }
+        </ul>
+    </div>
+</main>

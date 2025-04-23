@@ -1,0 +1,172 @@
+.pokemon-detail {
+    &__background {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: gray;
+        height: 100vh;
+        overflow: auto;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    &__type {
+        &--grass {
+            background-color: rgb(123, 172, 123);
+        }
+        &--fire {
+            background-color: rgb(245, 109, 109);
+        }
+        &--water {
+            background-color: rgb(95, 193, 250);
+        }
+        &--bug {
+            background-color: rgb(168, 206, 108);
+        }
+        &--normal {
+            background-color: rgb(218, 212, 174);
+        }
+        &--poison {
+            background-color: rgb(255, 117, 255);
+        }
+        &--electric {
+            background-color: rgb(255, 255, 117);
+        }
+        &--ground {
+            background-color: rgb(180, 126, 82);
+        }
+        &--fairy {
+            background-color: rgb(252, 153, 252);
+        }
+        &--fighting {
+            background-color: rgb(238, 114, 65);
+        }
+        &--psychic {
+            background-color: rgb(170, 44, 170);
+        }
+        &--rock {
+            background-color: rgb(121, 97, 75);
+        }
+        &--ghost {
+            background-color: rgb(95, 95, 197);
+        }
+        &--ice {
+            background-color: rgb(109, 214, 214);
+        }
+        &--dragon {
+            background-color: rgb(175, 164, 114);
+        }
+        &--dark {
+            background-color: rgb(68, 68, 68);
+        }
+        &--steel {
+            background-color: rgb(255, 117, 255);
+        }
+        &--flying {
+            background-color: rgb(117, 155, 255);
+        }
+    }
+
+    &__container {
+        width: 90%;
+        max-width: 768px;
+        margin-top: 16%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        border-radius: 8px;
+        padding: 16px;
+        height: fit-content;
+    }
+
+    &__image {
+        width: 40%;
+        max-width: 300px;
+        margin-top: -15%;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__info {
+        
+    }
+
+    &__name {
+        font-size: 32px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+    }
+
+    &__number {
+        color: white;   
+        font-size: 24px;
+    }
+
+    &__types {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        > * {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+    }
+    &__attributes {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 16px;
+        gap: 1rem;
+    }
+
+    &__attribute {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 100px;
+        padding: 8px;
+        border-radius: 4px;
+        background-color: #f0f0f0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    &__attribute-name {
+        font-size: 14px;
+        font-weight: bold;
+        color: #666;
+    }
+    &__attribute-value {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    &__header {
+        width: 90%;
+        max-width: 768px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 16px;
+        > * {
+            text-shadow: 0 1px 3px #666;
+        }
+    }
+    &__back {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        i {
+            font-size: 2rem;
+            color: white;
+        }
+    }
+}
