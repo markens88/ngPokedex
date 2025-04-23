@@ -1,0 +1,38 @@
+<main [class]="'pokemon-detail__background pokemon-detail__type--'+pokemon?.types[0].type.name">
+    <header class="pokemon-detail__header">
+        <button class="pokemon-detail__back" (click)="handleBack()">
+            <i class="bi bi-arrow-left"></i>
+        </button>
+        <span class="pokemon-detail__number">{{ getPokeNum(pokemon?.id) }}</span>
+    </header>
+    <div class="pokemon-detail__container">
+        @if (dataLoaded) {
+            <div class="pokemon-detail__image">
+                <img [src]="pokemon?.sprites.other['official-artwork'].front_default" />
+            </div>
+            <div class="pokemon-detail__info">
+                <div class="pokemon-detail__name">
+                    {{ pokemon?.name | titlecase }}
+                </div>
+                <div class="pokemon-detail__types">
+                    @for (type of pokemon?.types; track type.type.name) {
+                        <span [class]="'pokemon-detail__type pokemon-detail__type--'+type.type.name">{{ type.type.name | titlecase }}</span>
+                    }
+                </div>
+                <div class="pokemon-detail__attributes">
+                    <div class="pokemon-detail__attribute">
+                        <span class="pokemon-detail__attribute-value">{{ pokemon?.height / 10 }} m</span>
+                        <span class="pokemon-detail__attribute-name">Height</span>
+                    </div>
+                    <div class="pokemon-detail__attribute">
+                        <span class="pokemon-detail__attribute-value">{{ pokemon?.weight / 10 }} kg</span>
+                        <span class="pokemon-detail__attribute-name">Weight</span>
+                    </div>
+                </div>
+            </div>
+        } @else {
+            <div class="pokeball"></div>
+        }
+        
+    </div>
+</main>
